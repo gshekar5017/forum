@@ -13,7 +13,11 @@
       #logo
         %p Rails Forum
       #buttons
-        = link_to 'New Post', new_post_path
+        - if user_signed_in?
+          = link_to 'New Post', new_post_path
+        -else
+          = link_to 'Sign UP', new_user_registration_path
+          = link_to 'Sign in', new_user_session_path
   .wrapper
     %p.notice= notice
     %p.alert= alert
