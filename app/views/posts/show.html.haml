@@ -9,6 +9,10 @@
     %h3 Reply to Thread
     = render 'comments/form'
 
-  = link_to 'Edit', edit_post_path(@post)
-  = link_to "Delete", post_path(@post), method: :delete, data: {Confirm: 'Are You Sure?'}
-  = link_to 'Home', root_path
+  %br/
+  %hr/
+  %br/
+  .links
+    = link_to 'Edit', edit_post_path(@post), class: "button"
+    = link_to "Delete", post_path(@post), method: :delete, data: {Confirm: 'Are You Sure?'}, class: "button"
+    
